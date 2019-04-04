@@ -1,0 +1,7 @@
+topic read #
+
+user publisher
+topic readwrite $SYS/hfp/#
+
+user publisher
+topic readwrite #
