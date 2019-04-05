@@ -9,6 +9,9 @@ RUN mkdir -p /mqtt/config /mqtt/data /mqtt/log
 COPY config /mqtt/config/
 RUN chown -R mosquitto:mosquitto /mqtt
 
+RUN mosquitto_passwd -U /mqtt/config/passwd
+
+
 EXPOSE 1883 9001
 
 CMD ["mosquitto", "-c", "/mqtt/config/mosquitto.conf"]
